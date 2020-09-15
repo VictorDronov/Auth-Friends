@@ -13,10 +13,8 @@ const Login = (props) => {
 
   const changes = (e) => {
     setCredentials({
-      credentials: {
-        ...credentials,
-        [e.target.name]: e.target.value,
-      },
+      ...credentials,
+      [e.target.name]: e.target.value,
     });
   };
 
