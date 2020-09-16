@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { axiosWithAuth } from "../utils/axiosWithAuth";
 import FriendsForm from "./FriendsForm";
-import "../App.css"
+import "../App.css";
 
 const FriendsList = () => {
   const [friends, setFriends] = useState([]);
@@ -28,14 +28,20 @@ const FriendsList = () => {
       })
       .catch((err) => [console.log(err)]);
   };
-  // const editFriend = (id) => {
-  //   axiosWithAuth()
-  //     .put(`/api/friends/${id}`)
-  //     .then((res) => {
-  //       setFriends(res.data);
-  //     })
-  //     .catch((err) => [console.log(err)]);
-  // };
+
+  const editFriend = (id) => {
+    console.log("edit");
+    axiosWithAuth()
+      .put(`/api/friends/${id}`)
+      .then((res) => {})
+      .catch((err) => [console.log(err)]);
+  };
+
+  const edit = (id) => {
+    const friend = friends.find((f) => f.id === id);
+    setFriends({ ...friend });
+  };
+
   return (
     <div className="firendsBox">
       {friends.map((friend) => {
@@ -46,14 +52,14 @@ const FriendsList = () => {
               <p>Age: {friend.age}</p>
               <p>Email: {friend.email}</p>
             </div>
-            {/* <button onClick={() => editFriend(friend.id)}>Edit</button> */}
+            <button onClick={editFriend}>Edit</button>
             <button onClick={() => removeFriend(friend.id)}>
               Remove Friend
             </button>
           </div>
         );
       })}
-      <FriendsForm />
+      <FriendsForm friends={friends} />
     </div>
   );
 };

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { axiosWithAuth } from "../utils/axiosWithAuth";
 import "../App.css"
+
 const ititialFriendValue = {
   name: "",
   age: "",
@@ -29,6 +30,7 @@ const FriendsForm = () => {
     });
   };
 
+
   return (
     <div className="formBox">
       <h3>Import A New Friend</h3>
@@ -42,7 +44,7 @@ const FriendsForm = () => {
         </label>
         &nbsp;
         <label>
-          Email: <input type="text" name="email" onChange={inputChanges} />
+          Email: <input type="email" name="email" onChange={inputChanges} />
         </label>
         &nbsp;
         <button>Submit</button>
