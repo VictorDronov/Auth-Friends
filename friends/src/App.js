@@ -10,14 +10,11 @@ import "./App.css";
 function App() {
   return (
     <div className="App">
-      <ul>
-        <li>
-          <Link to="/login">Login</Link>
-        </li>
-        <li>
-          <Link to="/friendsList">FriendsList</Link>
-        </li>
-      </ul>
+      <h1>Welcome To Friends List</h1>
+      <nav>
+        <Link to="/login">Login</Link> &nbsp;
+        <Link to="/friendsList">FriendsList</Link>
+      </nav>
       <Switch>
         <PrivateRoute exact path="/friendsList" component={FriendsList} />
         <Route path="/login" component={Login} />
