@@ -1,3 +1,49 @@
-*{
-    text-align: center;
+* {
+  text-align: center;
 }
+html {
+  background-color: #0a2342;
+}
+.firendsBox {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background-color: #0a2342;
+  padding-bottom: 5%;
+}
+
+.friendCard {
+  width: 40%;
+  margin: 2%;
+  border-radius: 10px;
+  box-shadow: 6px 6px 10px #2ca58d;
+  background-color: #84bc9c;
+}
+
+/* FORM */
+
+.formBox {
+  display: flex;
+  flex-direction: column;
+  color: snow;
+}
+
+.navBox {
+  padding-top: 1%;
+}
+h1 {
+  color: snow;
+}
+.Link {
+  color: snow;
+  text-decoration: none;
+}
+
+.loginForm {
+  flex-direction: column;
+  display: flex;
+  padding: 2%;
+  height: 20%;
+  color: snow;
+}
+

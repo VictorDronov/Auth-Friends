@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { axiosWithAuth } from "../utils/axiosWithAuth";
-
+import "../App.css"
 const ititialFriendValue = {
   name: "",
   age: "",
@@ -30,7 +30,7 @@ const FriendsForm = () => {
   };
 
   return (
-    <div>
+    <div className="formBox">
       <h3>Import A New Friend</h3>
       <form onSubmit={sendNewFriend}>
         <label>
